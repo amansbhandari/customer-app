@@ -1,0 +1,12 @@
+.mat-toolbar {
+    background-color: #2199ea;
+    display: flex;
+    justify-content: flex-start;
+    > span {
+        margin-left: 10px;
+        color: white;
+    }
+    > img {
+        height: 80%;
+    }
+}
