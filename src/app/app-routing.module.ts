@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AppLayoutComponent } from 'src/app/layout/app-layout/app-layout.component';
+import { OnboardFormComponent } from './onboard-form/onboard-form.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: AppLayoutComponent,
+    component: HomeComponent,
+    children: [
+    ],
+  },
+  {
+    path: 'onboard',
+    component: OnboardFormComponent,
     children: [
     ],
   },
