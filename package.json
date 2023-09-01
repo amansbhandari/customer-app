@@ -1,6 +1,6 @@
 {
   "name": "customer-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -23,6 +23,7 @@
     "@angular/router": "^16.2.0",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
+    "@types/googlemaps": "^3.43.3",
     "component": "^1.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

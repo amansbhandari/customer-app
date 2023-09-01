@@ -18,7 +18,7 @@
     overflow: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
   
     > h3 {
@@ -30,5 +30,9 @@
       margin-top: 50px;
       width: 50%;
     }
+  }
+
+  .field {
+    padding: 20px;
   }
   

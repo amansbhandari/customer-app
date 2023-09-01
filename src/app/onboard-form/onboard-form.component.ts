@@ -10,9 +10,21 @@ export class OnboardFormComponent {
 
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
+    lastCtrl: ['', Validators.required],
+    emailCtrl: ['', Validators.required],
+    dobCtrl: ['', Validators.required],
+
   });
   secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
+    callCtrl: ['', Validators.required],
+    streetCtrl: ['', Validators.required],
+    aptCtrl: ['', Validators.required],
+    cityCtrl: ['', Validators.required],
+    stateCtrl: ['', Validators.required],
+    zipCtrl: ['', Validators.required],
+  });
+  thirdFormGroup = this._formBuilder.group({
+    ssnCtrl: ['', Validators.required],
   });
   isLinear = true;
 
