@@ -1,92 +1,83 @@
-<section class="container">
-  <div class="bg-image">
-  </div>
-  <div class="content">
-        <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
-          <mat-step [stepControl]="firstFormGroup">
-            <form [formGroup]="firstFormGroup">
-              <ng-template matStepLabel>Your Basic Information </ng-template>
-              <mat-form-field class= "field">
-                <mat-label>First Name</mat-label>
-                <input matInput formControlName="firstCtrl" required>
-              </mat-form-field>
-              <mat-form-field class= "field">
-                <mat-label>Last Name</mat-label>
-                <input matInput formControlName="lastCtrl" required>
-              </mat-form-field>
-              <mat-form-field class= "field">
-                <mat-label>Email</mat-label>
-                <input type="email" matInput formControlName="emailCtrl" required>
-              </mat-form-field>
-              <mat-form-field class="field">
-                <mat-label>Date Of Birth</mat-label>
-                <input matInput placeholder="mm/dd/yyyy" [matDatepicker]="picker" formControlName="dobCtrl" required>
-                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-              </mat-form-field>
-              <div>
-                <button mat-button matStepperNext>Next</button>
-              </div>
-            </form>
-          </mat-step>
-          <mat-step [stepControl]="secondFormGroup">
-            <form [formGroup]="secondFormGroup">
-              <ng-template matStepLabel>Your Contact Information</ng-template>
-              <mat-form-field class= "field">
-                <mat-label>Cell Phone</mat-label>
-                <input type="tel" matInput placeholder="Cell Phone" formControlName="callCtrl" required>
-              </mat-form-field>
-              <mat-form-field class= "field">
-                <mat-label>Street Address</mat-label>
-                <input matInput formControlName="streetCtrl" placeholder="Ex. 1 Main St"
-                       required>
-              </mat-form-field>
-              <mat-form-field class= "field">
-                <mat-label>Apt/Suite Number</mat-label>
-                <input matInput formControlName="aptCtrl" required>
-              </mat-form-field>
-              <mat-form-field class= "field">
-                <mat-label>City</mat-label>
-                <input matInput formControlName="cityCtrl" required>
-              </mat-form-field>
-              <mat-form-field class= "field">
-                <mat-label>State/Province</mat-label>
-                <input matInput formControlName="stateCtrl" required>
-              </mat-form-field>
-              <mat-form-field class= "field">
-                <mat-label>ZIP/Postal Code</mat-label>
-                <input matInput formControlName="zipCtrl" required>
-              </mat-form-field>
-              <div>
-                <button mat-button matStepperPrevious>Back</button>
-                <button mat-button matStepperNext>Next</button>
-              </div>
-            </form>
-          </mat-step>
-          <mat-step [stepControl]="thirdFormGroup">
-            <form [formGroup]="thirdFormGroup">
-              <ng-template matStepLabel>Your Social Security Number</ng-template>
-              <mat-form-field class= "field">
-                <mat-label>Social Security Number</mat-label>
-                <input matInput formControlName="ssnCtrl" required>
-              </mat-form-field>
-              <div>
-                <button mat-button matStepperPrevious>Back</button>
-                <button mat-button matStepperNext>Next</button>
-              </div>
-            </form>
-          </mat-step>
-          <mat-step>
-            <ng-template matStepLabel>Done</ng-template>
-            <p>You are now done.</p>
-            <div>
-              <button mat-button matStepperPrevious>Back</button>
-            </div>
-          </mat-step>
-        </mat-stepper>
-  </div>
-</section>
-
-
-
-
+<div class="content">
+  <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>{{ 'onboard.stepBasicInfo.title' | translate }} </ng-template>
+        <mat-form-field class="field">
+          <mat-label>{{ 'onboard.stepBasicInfo.firstName' | translate }}</mat-label>
+          <input matInput formControlName="firstCtrl" required>
+        </mat-form-field>
+        <mat-form-field class="field">
+          <mat-label>{{ 'onboard.stepBasicInfo.lastName' | translate }}</mat-label>
+          <input matInput formControlName="lastCtrl" required>
+        </mat-form-field>
+        <mat-form-field class="field">
+          <mat-label>{{ 'onboard.stepBasicInfo.email' | translate }}</mat-label>
+          <input type="email" matInput formControlName="emailCtrl" required>
+        </mat-form-field>
+        <mat-form-field class="field">
+          <mat-label>{{ 'onboard.stepBasicInfo.dob' | translate }}</mat-label>
+          <input matInput placeholder="mm/dd/yyyy" [matDatepicker]="picker" formControlName="dobCtrl" required>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>{{ 'onboard.next' | translate }}</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>{{ 'onboard.stepContact.title' | translate }}</ng-template>
+        <mat-form-field class="field">
+          <mat-label>{{ 'onboard.stepContact.cellPhone' | translate }}</mat-label>
+          <input type="tel" matInput placeholder="Cell Phone" formControlName="callCtrl" required>
+        </mat-form-field>
+        <mat-form-field class="field">
+          <mat-label>{{ 'onboard.stepContact.streetAddr' | translate }}</mat-label>
+          <input matInput formControlName="streetCtrl" placeholder="Ex. 1 Main St" required>
+        </mat-form-field>
+        <mat-form-field class="field">
+          <mat-label>{{ 'onboard.stepContact.apt' | translate }}</mat-label>
+          <input matInput formControlName="aptCtrl" required>
+        </mat-form-field>
+        <mat-form-field class="field">
+          <mat-label>{{ 'onboard.stepContact.city' | translate }}</mat-label>
+          <input matInput formControlName="cityCtrl" required>
+        </mat-form-field>
+        <mat-form-field class="field">
+          <mat-label>{{ 'onboard.stepContact.state' | translate }}</mat-label>
+          <input matInput formControlName="stateCtrl" required>
+        </mat-form-field>
+        <mat-form-field class="field">
+          <mat-label>{{ 'onboard.stepContact.zip' | translate }}</mat-label>
+          <input matInput formControlName="zipCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>{{ 'onboard.back' | translate }}</button>
+          <button mat-button matStepperNext>{{ 'onboard.next' | translate }}</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
+      <form [formGroup]="thirdFormGroup">
+        <ng-template matStepLabel>{{ 'onboard.stepSSN.title' | translate }}</ng-template>
+        <mat-form-field class="field">
+          <mat-label>{{ 'onboard.stepSSN.ssn' | translate }}</mat-label>
+          <input matInput formControlName="ssnCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>{{ 'onboard.back' | translate }}</button>
+          <button mat-button matStepperNext>{{ 'onboard.next' | translate }}</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>{{ 'onboard.done' | translate }}</ng-template>
+      <p>{{ 'onboard.messageDone' | translate }}</p>
+      <div>
+        <button mat-button matStepperPrevious>{{ 'onboard.back' | translate }}</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>

@@ -1,5 +1,32 @@
 {
     "company": {
         "title": "Sure Bank"
+    },
+    "onboard": {
+        "stepBasicInfo": {
+            "title": "Your Basic Information",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "dob": "Date Of Birth"
+        },
+        "stepContact": {
+            "title": "Your Contact Information",
+            "cellPhone": "Cell Phone",
+            "streetAddr": "Street Address",
+            "apt": "Apt/Suite Number",
+            "city": "City",
+            "state": "State/Province",
+            "zip": "ZIP/Postal Code"
+        },
+        "stepSSN": {
+            "title": "Your Social Security Number",
+            "ssn": "Social Security Number"
+        },
+        "back": "Back",
+        "next": "Next",
+        "done": "Done",
+        "messageDone": "You are done"
+
     }
 }
