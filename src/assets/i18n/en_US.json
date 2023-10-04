@@ -1,6 +1,9 @@
 {
     "company": {
-        "title": "Sure Bank"
+        "title": "TD Insurance"
+    },
+    "home": {
+        "checkYourRates": "Check your rate"
     },
     "onboard": {
         "stepBasicInfo": {
@@ -23,10 +26,11 @@
             "title": "Your Social Security Number",
             "ssn": "Social Security Number"
         },
-        "back": "Back",
+        "agree": "Agree",
         "next": "Next",
+        "back": "Back",
         "done": "Done",
-        "messageDone": "You are done"
+        "messageDone": "Your information will be saved and an agent will reach back to you as soon as possible.\n Do you agree?"
 
     }
 }

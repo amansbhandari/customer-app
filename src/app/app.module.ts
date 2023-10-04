@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { OnboardFormComponent } from './onboard-form/onboard-form.component';
 import { OnboardFormModule } from "./onboard-form/onboard-form.module";
+import { SharedModule } from "./_shared/shared.module";
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, HomeComponent, OnboardFormComponent],
@@ -30,7 +31,8 @@ import { OnboardFormModule } from "./onboard-form/onboard-form.module";
       },
     }),
     ReactiveFormsModule,
-    OnboardFormModule
+    OnboardFormModule,
+    SharedModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

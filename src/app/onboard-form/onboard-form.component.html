@@ -1,4 +1,5 @@
 <div class="content">
+  <!-- <h2>Kindly provide your information; Our representative will carefully assess it and respond with your quotation within the next 24 hours</h2> -->
   <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
@@ -22,7 +23,7 @@
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
         <div>
-          <button mat-button matStepperNext>{{ 'onboard.next' | translate }}</button>
+          <button mat-flat-button color="primary" matStepperNext>{{ 'onboard.next' | translate }}</button>
         </div>
       </form>
     </mat-step>
@@ -54,8 +55,8 @@
           <input matInput formControlName="zipCtrl" required>
         </mat-form-field>
         <div>
-          <button mat-button matStepperPrevious>{{ 'onboard.back' | translate }}</button>
-          <button mat-button matStepperNext>{{ 'onboard.next' | translate }}</button>
+          <button mat-flat-button mat-flat-buttonmatStepperPrevious color="accent">{{ 'onboard.back' | translate }}</button>
+          <button mat-flat-button matStepperNext color="primary">{{ 'onboard.next' | translate }}</button>
         </div>
       </form>
     </mat-step>
@@ -67,8 +68,8 @@
           <input matInput formControlName="ssnCtrl" required>
         </mat-form-field>
         <div>
-          <button mat-button matStepperPrevious>{{ 'onboard.back' | translate }}</button>
-          <button mat-button matStepperNext>{{ 'onboard.next' | translate }}</button>
+          <button mat-flat-button matStepperPrevious color="accent">{{ 'onboard.back' | translate }}</button>
+          <button mat-flat-button matStepperNext color="primary">{{ 'onboard.next' | translate }}</button>
         </div>
       </form>
     </mat-step>
@@ -76,7 +77,7 @@
       <ng-template matStepLabel>{{ 'onboard.done' | translate }}</ng-template>
       <p>{{ 'onboard.messageDone' | translate }}</p>
       <div>
-        <button mat-button matStepperPrevious>{{ 'onboard.back' | translate }}</button>
+        <button mat-flat-button matStepperPrevious color="primary" (click)="submit()">{{ 'onboard.agree' | translate }}</button>
       </div>
     </mat-step>
   </mat-stepper>
