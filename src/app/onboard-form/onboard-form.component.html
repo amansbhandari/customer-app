@@ -1,5 +1,5 @@
 <div class="content">
-  <!-- <h2>Kindly provide your information; Our representative will carefully assess it and respond with your quotation within the next 24 hours</h2> -->
+    <!-- <h2>Kindly provide your information; Our representative will carefully assess it and respond with your quotation within the next 24 hours</h2> -->
   <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
@@ -9,12 +9,16 @@
           <input matInput formControlName="firstCtrl" required>
         </mat-form-field>
         <mat-form-field class="field">
+          <mat-label>{{ 'onboard.stepBasicInfo.middleName' | translate }}</mat-label>
+          <input matInput formControlName="middleCtrl" required>
+        </mat-form-field>
+        <mat-form-field class="field">
           <mat-label>{{ 'onboard.stepBasicInfo.lastName' | translate }}</mat-label>
           <input matInput formControlName="lastCtrl" required>
         </mat-form-field>
         <mat-form-field class="field">
           <mat-label>{{ 'onboard.stepBasicInfo.email' | translate }}</mat-label>
-          <input type="email" matInput formControlName="emailCtrl" required>
+          <input type="email" matInput formControlName="emailCtrl" ngModel [email]="true" required>
         </mat-form-field>
         <mat-form-field class="field">
           <mat-label>{{ 'onboard.stepBasicInfo.dob' | translate }}</mat-label>
@@ -51,11 +55,16 @@
           <input matInput formControlName="stateCtrl" required>
         </mat-form-field>
         <mat-form-field class="field">
+          <mat-label>{{ 'onboard.stepContact.country' | translate }}</mat-label>
+          <input matInput formControlName="countryCtrl" required>
+        </mat-form-field>
+        <mat-form-field class="field">
           <mat-label>{{ 'onboard.stepContact.zip' | translate }}</mat-label>
           <input matInput formControlName="zipCtrl" required>
         </mat-form-field>
         <div>
-          <button mat-flat-button mat-flat-buttonmatStepperPrevious color="accent">{{ 'onboard.back' | translate }}</button>
+          <button mat-flat-button mat-flat-buttonmatStepperPrevious color="accent">{{ 'onboard.back' | translate
+            }}</button>
           <button mat-flat-button matStepperNext color="primary">{{ 'onboard.next' | translate }}</button>
         </div>
       </form>
@@ -73,11 +82,42 @@
         </div>
       </form>
     </mat-step>
+    <mat-step [stepControl]="fourthFormGroup">
+      <form [formGroup]="fourthFormGroup">
+        <ng-template matStepLabel>{{ 'onboard.employer.title' | translate }}</ng-template>
+        <mat-form-field class="field">
+          <mat-label>{{ 'onboard.employer.name' | translate }}</mat-label>
+          <input matInput formControlName="empNameCtrl" required>
+        </mat-form-field>
+        <mat-form-field class="field">
+          <mat-label>{{ 'onboard.employer.jobTitle' | translate }}</mat-label>
+          <input matInput formControlName="empJobTitle" required>
+        </mat-form-field>
+
+        <mat-form-field class="field">
+          <mat-label>{{ 'onboard.employer.startDate' | translate }}</mat-label>
+          <input matInput placeholder="mm/dd/yyyy" [matDatepicker]="picker" formControlName="empStartDateCtrl" required>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="field">
+          <mat-label>{{ 'onboard.employer.endDate' | translate }}</mat-label>
+          <input matInput placeholder="mm/dd/yyyy" [matDatepicker]="picker" formControlName="empStartDateCtrl" required>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <div>
+          <button mat-flat-button matStepperPrevious color="accent">{{ 'onboard.back' | translate }}</button>
+          <button mat-flat-button matStepperNext color="primary">{{ 'onboard.next' | translate }}</button>
+        </div>
+      </form>
+    </mat-step>
     <mat-step>
       <ng-template matStepLabel>{{ 'onboard.done' | translate }}</ng-template>
       <p>{{ 'onboard.messageDone' | translate }}</p>
       <div>
-        <button mat-flat-button matStepperPrevious color="primary" (click)="submit()">{{ 'onboard.agree' | translate }}</button>
+        <button mat-flat-button matStepperPrevious color="primary" (click)="submit()">{{ 'onboard.agree' | translate
+          }}</button>
       </div>
     </mat-step>
   </mat-stepper>

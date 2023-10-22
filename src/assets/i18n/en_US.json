@@ -10,6 +10,7 @@
             "title": "Your Basic Information",
             "firstName": "First Name",
             "lastName": "Last Name",
+            "middleName": "Middle Name",
             "email": "Email",
             "dob": "Date Of Birth"
         },
@@ -20,11 +21,19 @@
             "apt": "Apt/Suite Number",
             "city": "City",
             "state": "State/Province",
+            "country": "Country",
             "zip": "ZIP/Postal Code"
         },
         "stepSSN": {
             "title": "Your Social Security Number",
             "ssn": "Social Security Number"
+        },
+        "employer": {
+            "title": "Employer Details",
+            "name": "Employer Name",
+            "jobTitle": "Job Title",
+            "startDate": "Employment Start Date",
+            "endDate": "Employment End Date"
         },
         "agree": "Agree",
         "next": "Next",
